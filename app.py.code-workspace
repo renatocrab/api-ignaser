@@ -1,3 +1,10 @@
-{
-	"folders": []
-}
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return jsonify({
+        "status": "ok",
+        "message": "API IGNA funcionando en Render"
+    })
